@@ -4,5 +4,6 @@ ref = https://console.cloud.google.com/marketplace/product/google/translate.goog
 Google
 ![img.png](src/main/resources/static/img.png)
 
-
+사용량
+![img_1.png](src/main/resources/static/img_1.png)
 
