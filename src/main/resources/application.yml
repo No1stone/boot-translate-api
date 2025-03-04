@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: boot-translate-api
+
+
+google:
+  translate:
+    api-key: google-translate-key
