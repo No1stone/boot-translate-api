@@ -19,4 +19,11 @@ ref = https://guide.ncloud-docs.com/docs/naveropenapiv3-application
 ![img_4.png](src/main/resources/static/img_4.png)
 
 
+Deepl Api
+ref = https://www.deepl.com/ko/pro#developer
+회원가입후
+ref = https://www.deepl.com/ko/pro#developer
+무료가입
+![img_5.png](src/main/resources/static/img_5.png)
+
 

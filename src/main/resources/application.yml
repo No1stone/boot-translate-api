@@ -13,5 +13,6 @@ key:
     papago:
       clientId: ${key.naver.papago.clientId}
       clientSecret: ${key.naver.papago.clientSecret}
-
+  deepl:
+    authkey: ${key.deepl.authkey}
 
