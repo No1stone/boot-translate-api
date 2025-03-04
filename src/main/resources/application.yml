@@ -9,3 +9,9 @@ key:
   google:
     tanslate:
       apikey: ${google.translate.apikey}
+  naver:
+    papago:
+      clientId: ${key.naver.papago.clientId}
+      clientSecret: ${key.naver.papago.clientSecret}
+
+
