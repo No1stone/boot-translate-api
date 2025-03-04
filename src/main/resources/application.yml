@@ -5,6 +5,7 @@ spring:
 server:
   port: 8091
 
-google:
-  translate:
-    api-key: google-translate-key
+key:
+  google:
+    tanslate:
+      apikey: ${google.translate.apikey}
