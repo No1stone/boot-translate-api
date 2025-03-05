@@ -19,15 +19,21 @@ public class DeepLTranslateService {
     private static final String DEEPL_URL = "https://api-free.deepl.com/v2/translate";
 
     public String translate(String text, String sourceLang, String targetLang) {
-        DeeplTranslateRequest request = new DeeplTranslateRequest(deeplKey, text, sourceLang, targetLang);
+        DeeplTranslateRequest request = new DeeplTranslateRequest(text, sourceLang, targetLang);
 
-        RestClient rc = RestClient.builder().build();
+        RestClient rc = RestClient.builder()
+                .defaultHeader("Authorization", "DeepL-Auth-Key " + deeplKey)
+                .defaultHeader("Content-Type", "application/json")
+                .build();
+
 
         DeeplTranslateResponse response = rc.post()
                 .uri(DEEPL_URL)
                 .body(request)
                 .retrieve()
                 .body(DeeplTranslateResponse.class);
+
         return response.getTranslatedText();
     }
+
 }

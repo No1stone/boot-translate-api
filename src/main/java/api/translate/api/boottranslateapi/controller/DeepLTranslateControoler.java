@@ -19,6 +19,6 @@ public class DeepLTranslateControoler {
 
     @GetMapping("/deepl/{text}")
     public String translate(@PathVariable String text) {
-        return deepLTranslateService.translate(text,"en","ko");
+        return deepLTranslateService.translate(text,"EN","KO");
     }
 }

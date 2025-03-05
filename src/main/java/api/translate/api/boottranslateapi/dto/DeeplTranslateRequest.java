@@ -6,16 +6,16 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import java.util.Arrays;
+import java.util.List;
+
 @Getter
 @Setter
 @NoArgsConstructor
 public class DeeplTranslateRequest {
 
-    @JsonProperty("auth_key")
-    private String authKey;
-
     @JsonProperty("text")
-    private String text;
+    private List<String> text;
 
     @JsonProperty("source_lang")
     private String sourceLang;
@@ -23,9 +23,8 @@ public class DeeplTranslateRequest {
     @JsonProperty("target_lang")
     private String targetLang;
 
-    public DeeplTranslateRequest(String authKey, String text, String sourceLang, String targetLang) {
-        this.authKey = authKey;
-        this.text = text;
+    public DeeplTranslateRequest(String text, String sourceLang, String targetLang) {
+        this.text = Arrays.asList(text);
         this.sourceLang = sourceLang.toUpperCase();
         this.targetLang = targetLang.toUpperCase();
     }

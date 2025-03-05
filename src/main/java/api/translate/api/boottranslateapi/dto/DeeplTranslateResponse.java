@@ -13,12 +13,16 @@ public class DeeplTranslateResponse {
     private List<Translation> translations;
 
     public String getTranslatedText() {
-        return translations.get(0).translatedText;
+        return translations.get(0).text;
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static class Translation {
+
+        @JsonProperty("detected_source_language")
+        private String detectedSourceLanguage;
+
         @JsonProperty("text")
-        private String translatedText;
+        private String text;
     }
 }
